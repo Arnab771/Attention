@@ -7,10 +7,9 @@ help = """
     **HELP**
 
     python main.py [file]                                  for simple graph(taking messages from both participants in chat together).\n
-    python main.py [file] --split [Person1] [Person2]      Takes messages from participants seperately and plots them together. "Person1" and "Person2" should also be the name used in the given file.\n
+    python main.py [file] --split [Name of First Person] [Name of Second Person]      Takes messages from participants seperately and plots them together. "Person1" and "Person2" should also be the name used in the given file.\n
     """
-
-if "--split" in arg and len(arg) == 5:
+if "--split" == arg[2] and len(arg) == 5:
     try:
         split_stat(arg[1], arg[3], arg[4])
     except Exception:
